@@ -20,7 +20,7 @@ int dev(int n1, int n2) {
 
 int main()
 {
-	int val1, val2, res;
+	int val1, val2, res = 0;
 	char calc;
 
 	cout << "두 정수를 입력하세요 > ";
@@ -29,24 +29,25 @@ int main()
 	cin >> calc;
 
 	if (calc == '+') {
-		int res;
+		//int res;
 		res = sum(val1, val2);
 		cout << "덧셈결과 > " << res << endl;
 	}
 
 	else if (calc == '-') {
-		result = val1 - val2;
-		cout << "뺄셈 결과 > " << result << endl;
+		//int res;
+		res = sub(val1, val2);
+		cout << "뺄셈 결과 > " << res << endl;
 	}
 
 	else if (calc == '*') {
-		result = val1 * val2;
-		cout << "곱셈 결과 > " << result << endl;
+		res = multi(val1, val2);
+		cout << "곱셈 결과 > " << res << endl;
 	}
 
 	else if (calc == '/') {
-		result = val1 / val2;
-		cout << "나눗셈 결과(몫) > " << result << endl;
+		res = dev(val1, val2);
+		cout << "나눗셈 결과(몫) > " << res << endl;
 	}
 
 	else cout << "잘못된 연산자입니다." << endl;
