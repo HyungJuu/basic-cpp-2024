@@ -1,6 +1,5 @@
 ﻿#include <iostream>
 
-/*
 int global = 100; // 전역변수. 프로그램 어디에서든 사용가능
 
 void func() {

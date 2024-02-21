@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 
-/*int main() {
+int main() {
 	
 	int val1, val2;
 	// int val1;

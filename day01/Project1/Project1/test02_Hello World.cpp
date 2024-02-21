@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-/*
+
 int main()
 {
 	int num = 20;
@@ -9,4 +9,3 @@ int main()
 	std::cout << ' ' << 3.14 << std::endl;
 	return 0;
 }
-*/
