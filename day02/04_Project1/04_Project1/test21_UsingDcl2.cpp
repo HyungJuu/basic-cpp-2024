@@ -1,6 +1,6 @@
-#include <iostream>
+ï»¿#include <iostream>
 
-//using std::cin; // °³º°ÁöÁ¤
+//using std::cin; // ê°œë³„ì§€ì •
 //using std::cout;
 //using std::endl;
 
