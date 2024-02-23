@@ -15,22 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test05_struct01.cpp">
+    <ClInclude Include="test11_Car.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="test15_Filedivi.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test12_Car.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="test06_struct02.cpp">
+    <ClCompile Include="test13_RacingMain.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="test07_struct03.cpp">
+    <ClCompile Include="test14_Filedivi01.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="test08_RacingCarEnum.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="test09_RacingCarOuterFunc.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="test10_RacingCarClassBase.cpp">
+    <ClCompile Include="test16_Filedivi.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
