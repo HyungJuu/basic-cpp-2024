@@ -1,27 +1,28 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "test17_Filedivi.h"
 using namespace std;
 
-Human::Human(char aname, int aage, char ajob)
+Human::Human(const char* aname, int aage, const char* ajob)
 {
-	//strcpy(name, aname);
-
-	name = aname;
+	strcpy(name, aname);
+	strcpy(job, ajob);
 	age = aage;
-	job = ajob;
+
+	//name = aname;
+	//job = ajob;
 }
 
 void Human::HumanInfo()
 {
-	cout << "³ª´Â " << age << "»ìÀÎ " << job << ' ' << name << " ÀÔ´Ï´Ù." << endl;
-	//printf("³ª´Â %d »ìÀÎ %s %s ÀÔ´Ï´Ù.\n", age, job, name);
+	//cout << "ë‚˜ëŠ” " << age << "ì‚´ì¸ " << job << ' ' << name << " ìž…ë‹ˆë‹¤." << endl;
+	printf("ë‚˜ëŠ” %dì‚´ì¸ %s %sìž…ë‹ˆë‹¤.\n", age, job, name);
 }
 
 
 int main()
 {
-	Human h("±è±Ù¾Æ", 25, "¹é¼ö");	// °´Ã¼»ý¼º¹æ¹ý
-	h.HumanInfo();	// ³ª´Â 25»ìÀÎ ¹é¼ö ±è±Ù¾ÆÀÔ´Ï´Ù.
+	Human h("ê¹€ê·¼ì•„", 25, "ë°±ìˆ˜");	// ê°ì²´ìƒì„±ë°©ë²•
+	h.HumanInfo();	// ë‚˜ëŠ” 25ì‚´ì¸ ë°±ìˆ˜ ê¹€ê·¼ì•„ìž…ë‹ˆë‹¤.
 
 	return 0;
 }
