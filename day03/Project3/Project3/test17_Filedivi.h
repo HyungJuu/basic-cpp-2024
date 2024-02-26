@@ -7,11 +7,12 @@ using namespace std;
 class Human
 {
 private:
-	char name[20];
-	int age;
-	char job[20];
+	char Name[20];
+	int Age;
+	char Job[20];
+	char Birth[20];
 
 public:
-	Human(const char* aname, int aage, const char* ajob);
+	Human(const char* name, const char *birth, int age, const char* job);
 	void HumanInfo();
 };
