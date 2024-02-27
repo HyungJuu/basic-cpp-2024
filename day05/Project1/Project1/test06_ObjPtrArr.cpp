@@ -45,7 +45,7 @@ public:
 
 int main(void)
 {
-	Person * parr[3];	
+	Person * parr[3];	// 객체 포인터 배열 : 포인터변수(주소값 저장)로 이루어진 배열
 
 	char namestr[100];
 	char* strptr;
@@ -57,11 +57,13 @@ int main(void)
 		cin >> namestr;
 		cout << "나이 : ";
 		cin >> age;
-		parr[i] = new Person(namestr, age);
+
+		parr[i] = new Person(namestr, age);		// 힙영역에 객체를 생성한다.
 	}
-	parr[0]->ShowPersonInfo();
+	parr[0]->ShowPersonInfo();		// -> 연산자 : 객체포인터를 통해 멤버에 접근할때 사용
 	parr[1]->ShowPersonInfo();
 	parr[2]->ShowPersonInfo();
+
 	delete parr[0];
 	delete parr[1];
 	delete parr[2];
