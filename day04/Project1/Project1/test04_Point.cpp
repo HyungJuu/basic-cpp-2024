@@ -2,6 +2,8 @@
 #include "test03_Point.h"
 using namespace std;
 
+/* 이전 코드
+ 
 bool Point::InitMembers(int xpos, int ypos) // 메서드(함수) 정의
 {
 	if (xpos < 0 || ypos < 0)
@@ -13,7 +15,16 @@ bool Point::InitMembers(int xpos, int ypos) // 메서드(함수) 정의
 	x = xpos;
 	y = ypos;
 	return true;
+} 
+*/
+
+
+Point::Point(const int& xpos, const int& ypos)	// 생성자 추가
+{
+	x = xpos;
+	y = ypos;
 }
+
 
 int Point::GetX() const		// const가 앞에 붙으면( const int Point::GetX() ) 출력을 상수화시킨다는 것
 {							// 함수의 const화는 뒤에 붙인다.

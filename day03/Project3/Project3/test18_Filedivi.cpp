@@ -2,12 +2,12 @@
 #include "test17_Filedivi.h"
 using namespace std;
 
-Human::Human(const char* name, const char *birth, int age, const char* job)
+Human::Human(const char* name, const char *birth, int age, const char* job)	//: Birth(birth) -> 멤버 이니셜라이저
 {
 	strcpy(Name, name);
 	strcpy(Job, job);
 	Age = age;
-	strcpy(Birth, birth);
+	strcpy(Birth, birth);		// 숫자를 쓸때 00부터 쓰지않기때문에 001122 -> 594로 출력되므로 문자열로 취급해서 작성
 	//Birth = birth;
 	
 }

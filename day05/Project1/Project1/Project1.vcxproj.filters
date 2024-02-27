@@ -15,31 +15,23 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test01_FruitSaleSim1.cpp">
+    <ClCompile Include="test01_ReferenceMember.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="test02_RectangleFault.cpp">
+    <ClCompile Include="test02_PrivateConstructor.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="test04_Point.cpp">
+    <ClCompile Include="test03_Destructor.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="test06_Rectangle.cpp">
+    <ClCompile Include="test04_dynamicA.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="test07_RectangleFaultFind.cpp">
+    <ClCompile Include="test05_ObjArr.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="test15_RectangleConstructor.cpp">
+    <ClCompile Include="test06_ObjPtrArr.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="test03_Point.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="test05_Rectangle.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
