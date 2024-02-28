@@ -127,6 +127,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="test14_DefaultValue1.cpp" />
+    <ClCompile Include="test15_DefaultValue2.cpp" />
+    <ClCompile Include="test16_DefaultValue3.cpp" />
+    <ClCompile Include="test17_222_01.cpp" />
+    <ClCompile Include="test18_InlineFunc.cpp" />
+    <ClCompile Include="test19_NameSp1.cpp" />
+    <ClCompile Include="test20_NameSp2.cpp" />
+    <ClCompile Include="test21_UsingDcl2.cpp" />
+    <ClCompile Include="test22_NameAlias.cpp" />
+    <ClCompile Include="test23_222_02.cpp" />
+    <ClCompile Include="test24_222_03.cpp" />
+    <ClCompile Include="test25_pointer.cpp" />
+    <ClCompile Include="test26_swap01.cpp" />
+    <ClCompile Include="test27_swap02.cpp" />
+    <ClCompile Include="test28_swap03.cpp" />
+    <ClCompile Include="test29_RefArrElem.cpp" />
+    <ClCompile Include="test30_RefSwap.cpp" />
+    <ClCompile Include="test31_RefReturnOne.cpp" />
+    <ClCompile Include="test32_RefReturnTwo.cpp" />
     <ClCompile Include="test33_RefReturn3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
