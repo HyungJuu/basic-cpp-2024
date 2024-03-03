@@ -2,7 +2,7 @@
 
 namespace BestComImpl // 이름공간 안에 함수선언만 삽입
 {
-	void SimpleFunc(void);
+	void SimpleFunc(void);	// 함수 선언
 }
 
 namespace ProgComImpl 

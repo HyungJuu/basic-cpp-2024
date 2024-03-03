@@ -13,6 +13,7 @@ int main(void)
 	arr[3] = 10;
 	cout << "arr[3] : " << arr[3] << endl;
 
+	
 	int& ref1 = arr[0];
 	int& ref2 = arr[1];
 	int& ref3 = arr[2];

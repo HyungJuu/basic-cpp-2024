@@ -5,12 +5,13 @@ using namespace std;
 /*
 	swap함수 구현하기
 */
+// swap() : 두 개의 참조변수 a, b를 받아, 두 값을 교환한다.
 void swap(int *aa, int *ab)	// 주소를 받을수 있는 포인터 변수를 선언
 {
-	int temp;
+	int temp;				// 임시변수 temp를 선언하고, aa가 가리키는 값을 저장한다.
 	temp = *aa;				// 주소의 데이터를 참조. 지역변수 a 에 들어있는 데이터를 참조
-	*aa = *ab;
-	*ab = temp;
+	*aa = *ab;				// aa에 ab의 값을 대입한다.
+	*ab = temp;				// ab에 임시변수 temp의 값을 대입한다.
 }
 
 int main()
@@ -48,5 +49,5 @@ int main()
 
 
 // int num = 10;			일반적인 변수선언
-// int* ptr = &num1;		*ptr -> 포인터변수 => 주소저장  / &num1
+// int* ptr = &num1;		포인터 변수 ptr에 num1의 주소값(&num1)을 저장
 // int &num2 = num1;		&num2 -> 참조변수 = 또다른 변수의 이름을 저장
