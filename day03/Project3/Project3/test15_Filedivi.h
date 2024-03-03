@@ -9,7 +9,7 @@ class AClass
 private:
 	int num;
 
-public:
+public:		// 접근제어 지시자
 	AClass(int anum);
 	void AInfo();
 };

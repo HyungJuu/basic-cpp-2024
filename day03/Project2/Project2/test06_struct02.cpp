@@ -5,7 +5,7 @@
 #include <iostream>
 
 typedef struct human {		// human 구조체(사용자 정의 자료형)
-	char name[20];			// 속성변수(name, age,job)
+	char name[20];			// 속성 멤버변수(name, age,job)
 	int age;
 	char job[20];
 
@@ -22,6 +22,6 @@ int main()
 	int a = 10;
 	human h1 = { "홍길동", 50, "의적" };	// Human 타입의 변수를 선언하고 초기화
 	h1.showHuman();
-	
+
 	return 0;
 }

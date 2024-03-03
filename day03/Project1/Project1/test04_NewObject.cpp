@@ -16,12 +16,14 @@ int main(void)
 	cout << "case 1 : ";
 	Simple* sp1 = new Simple; // new 연산자로 힙영역에 Simple이라는 객체 생성
 	// Aaa *ap = new Aaa;
+
 	cout << "case2 : ";
 	Simple* sp2 = (Simple*)malloc(sizeof(Simple) * 1);
 	// malloc으로 객체생성
+
 	cout << endl << "end of main" << endl;
-	delete sp1;		// 객체를 반환
-	free(sp2);
+	delete sp1;		// new 연산자로 할당받은 Simple 객체 소멸(삭제, 반환)
+	free(sp2);		// malloc 함수호출을 통해 할당받은 메모리 공간 소멸(삭제, 반환)
 	return 0;
 }
 

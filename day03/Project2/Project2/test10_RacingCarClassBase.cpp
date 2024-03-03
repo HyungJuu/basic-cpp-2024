@@ -17,20 +17,21 @@ namespace CAR_CONST		// 이름공간 생성
 
 class Car	// 클래스
 {
-	// 멤버변수, 필드, 속성
+// 멤버변수, 필드, 속성
 private: // 클래스 안에서만 접근가능하도록 제한
-	char gamerID[CAR_CONST::ID_LEN];
-	int fuelGauge;
-	int curSpeed;
+	char gamerID[CAR_CONST::ID_LEN];	// 자동차 소유자 ID
+	int fuelGauge;						// 자동자 연료량
+	int curSpeed;						// 자동차 현재속도
 
-	// 멤버함수, 메서드, 기능
+// 멤버함수, 메서드, 기능
 public: // 클래스 외부에서 접근가능
 	void InitMembers(const char * ID, int fuel);		// 필드를 초기화시키는 기능 (멤버변수 2개 선언되어 있음)
-	void ShowCarState();
-	void Accel();
-	void Break();
+	void ShowCarState();				// 자동차 상태 출력함수(소유자ID, 연료량, 현재속도)
+	void Accel();						// 자동차 가속 함수(연료 소모량, 속도)
+	void Break();						// 자동차 감속 함수(속도)
 };
 
+// 클래스 내부에는 함수선언만 하고 외부에서 함수 정의
 void Car::InitMembers(const char * ID, int fuel)		// 필드의 초기화를 담당하는 메서드
 {
 	strcpy(gamerID, ID);	// 전달된 ID의 문자열을 복사해서 gamerID에 저장

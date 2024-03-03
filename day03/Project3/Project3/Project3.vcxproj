@@ -133,7 +133,7 @@
     <ClInclude Include="test15_Filedivi.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="test17_Filedivi.h" />
+    <ClInclude Include="test17_과제.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test12_Car.cpp">
@@ -152,7 +152,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</SDLCheck>
     </ClCompile>
-    <ClCompile Include="test18_Filedivi.cpp">
+    <ClCompile Include="test18_과제.cpp">
       <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</SDLCheck>
     </ClCompile>
   </ItemGroup>

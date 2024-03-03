@@ -1,7 +1,7 @@
 ﻿#pragma once
 using namespace std;
 /*
-	test17_Filedivi.h 헤더파일 : 선언
+	test17_과제.h 헤더파일 : 선언
 */
 
 class Human

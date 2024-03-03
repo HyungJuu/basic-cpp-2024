@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-#include "test17_Filedivi.h"
+#include "test17_과제.h"
 using namespace std;
 
 Human::Human(const char* name, const char *birth, int age, const char* job)	//: Birth(birth) -> 멤버 이니셜라이저
