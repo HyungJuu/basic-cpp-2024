@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿// EmployeeMamager3에 4 코드 추가작성
+#include <iostream>
 #include <cstring>
 using namespace std;
 
@@ -17,6 +18,14 @@ public:
 	{
 		cout << "name : " << name << endl;
 	}
+
+	virtual int GetPay() const
+	{
+		return 0;
+	}
+
+	virtual void ShowSalaryInfo() const
+	{ }
 };
 
 class PermanentWorker : public Employee		// Employee 클래스를 상속받는다.
@@ -85,7 +94,7 @@ public:
 	}
 	int GetPay() const
 	{
-		cout << "SalesWorker" << endl;		// 오버라이딩된 멤버함수는 자식 것이 실행된다.
+		//cout << "SalesWorker" << endl;		// 오버라이딩된 멤버함수는 자식 것이 실행된다.
 		return PermanentWorker::GetPay()	// 따라서 재정의된 부모 것을 호출하려면 -> PermanentWorker::GetPay() => PermanentWorker의 GetPay 함수 호출
 			+ (int)(salesResult * bonusRatio);
 	}
@@ -113,18 +122,15 @@ public:
 
 	void ShowAllSalaryInfo() const
 	{
-		/*
 		for(int i = 0; i < empNum; i++)
 			empList[i]->ShowSalaryInfo();
-		*/
 	}
 	void ShowTotalSalary() const
 	{
 		int sum = 0;
-		/*
 		for(int i = 0; i < empNum; i++)
 			sum += empList[i]->GetPay();
-		*/
+
 		cout << "salary sum : " << sum << endl;
 	}
 	~EmployeeHandler()
@@ -159,8 +165,8 @@ int main()
 	// 이번 달에 지불해야 할 급여의 총합
 	handler.ShowTotalSalary();
 
-	SalesWorker s("Hong",1000, 0.1 );
-	cout << s.GetPay() << endl;
-	s.ShowSalaryInfo();
+	//SalesWorker s("Hong",1000, 0.1 );
+	//cout << s.GetPay() << endl;
+	//s.ShowSalaryInfo();
 	return 0;
 }

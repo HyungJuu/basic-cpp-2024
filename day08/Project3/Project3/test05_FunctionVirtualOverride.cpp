@@ -4,7 +4,7 @@ using namespace std;
 class First
 {
 public:
-	virtual void MyFunc() { cout << "FirstFunc" << endl; }
+	virtual void MyFunc() { cout << "FirstFunc" << endl; }	// virtual : MyFunc()를 가상함수로 선언
 };
 
 class Second : public First
