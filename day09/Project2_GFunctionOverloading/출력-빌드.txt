@@ -1,6 +1,0 @@
-﻿오전 10:51에 빌드를 시작함...
-1>------ 빌드 시작: 프로젝트: Project3_OneOpndOverloading, 구성: Debug x64 ------
-1>test03_OneOpndOverloading.cpp
-1>Project3_OneOpndOverloading.vcxproj -> C:\Sources\basic-cpp-2024\day09\Project3_OneOpndOverloading\x64\Debug\Project3_OneOpndOverloading.exe
-========== 빌드: 1개 성공, 0개 실패, 0개 최신 상태, 0개 건너뜀 ==========
-========== 빌드이(가) 오전 10:51에 완료되었으며, 01.713 초이(가) 걸림 ==========
