@@ -5,37 +5,69 @@ IoT 시스템개발자 심화 프로그래밍 언어 학습리포지토리
 - 개발환경 설치
 	- Visual Studio 2022 Community 설치
 	- C, C++ 소스코드 실행
-	- C++에 대해 설명
-
-- 제어문
-	- 선택제어문 
-		- if, switch
-		- if, else 문(C언어종류) / elif = Python
-		- 반복문 For
-		- 반복문 While
-		- Overloading(재정의), Overriding
+	
+- C++ 기초
+	- 함수 정의
+	```c++
+	int main()
+	{				
+		return 0;	
+	}
+	// int -> 함수 출력(출력이 없을 때 : void) --> 출력이 있으면 return은 필수
+	// main -> 함수명
+	// ( ) -> 함수 입력(입력이 없을 때 : void)
+	// { } -> 함수 정의
+	```
+	
+	- 변수 선언
+		- RAM으로부터 저장공간을 할당받는다.
+		- type(자료형) : 할당받을 공간의 크기
+			- 문자 : 문자(char), 문자열
+			- 숫자 : 정수(int), 실수
 		
-	- 반복제어문 
-		- for,while
-		- for(초기식; 조건식; 증감식) { }
-			1. 초기식을 가지고 조건식을 따진다.
-			2. 참이면 for문의 실행문 실행
-			3. 증감식을 실행
-			4. 조건식을 따지고 조건식이 거짓이 될때까지 2-4 과정 반복
-		- while(조건식)
-
+	- 문자/문자열 입출력
+		- std::cout<<	: 출력
+		- std::cin>>	: 키보드로부터의 입력
+		
+	- 제어문
+		- 선택제어문 : if, switch
+			- if, else 문(C언어종류) / elif = Python
+		
+		- 반복제어문 : for,while
+			- for(초기식; 조건식; 증감식) { }
+				1. 초기식을 가지고 조건식을 따진다.
+				2. 참이면 for문의 실행문 실행
+				3. 증감식을 실행
+				4. 조건식을 따지고 조건식이 참일 때 2-4 과정 반복
+			- while(조건식) { } 
 	
-- 지역변수 = 로컬변수
-	- 선언되어진 범위 안에서만 사용이 가능(static 영역에 저장)
+	- 함수 다형성
+		- Overloading(다중정의) : 함수의 이름이 같아도 매개변수(입력)이 다른 것 -> 매개변수의 개수, 매개변수의 자료형...
+		- Overriding(재정의) : 상속관계에서 사용됨
+	```C++
+	// 오버로딩 : 함수명은 같지만 매개변수의 타입(type)이 다르다.
+	void MyFunc(void) 
+	{
+		std::cout << "Myfunc(void) called" << std::endl;
+	}
 
-- 자료형
-	- 문자 : 문자(char), 문자열
-	- 숫자 : 정수(int), 실수
+	void MyFunc(char c)
+	{
+		std::cout << "Myfunc(char c) called" << std::endl;
+	}
+
+	void MyFunc(int a, int b) 
+	{
+		std::cout << "Myfunc(int a, int b) called" << std::endl;
+	}
+	```
 	
-- 정수로 계산하기
+	- 지역변수 = 로컬변수
+		- 선언되어진 범위 안에서만 사용이 가능(static 영역에 저장)
+
 	
 ## 2일차
-- class 안에 들어 가는 함수 = Method
+// class 안에 들어 가는 함수 = Method
 
 - Default Value
 - Name Space
@@ -45,6 +77,10 @@ IoT 시스템개발자 심화 프로그래밍 언어 학습리포지토리
 	- HEAP : 사용자에게 할당된 영역
 		= Malloc() -> free()반환 = 사용을 할려면 Malloc으로 할당을 받는다
 	- data: 함수, 전역변수, 상수, 문자 리터럴
+	``` C++
+	// A & B = 비트 And 연산자
+	// A && B = 논리 And 연산자 = 논리 곱
+	```
 		
 ## 3일차
 - const 참조자
