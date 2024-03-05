@@ -145,22 +145,55 @@ SoSimple sim2(sim1); // 복사생성자 호출
 - static : 정적 데이터 영역에 생성 -> 함수를 빠져나가도 소멸(초기화)되지 않는다.
 
 ## 7일차
-- static 멤버변수(클래스변수) -> static 변수선언;
+- static 멤버변수(클래스변수) -> 형태 : static 변수선언;
+	- 객체 생성마다 함께 생성되는 변수가 아니라 메모리 공간에 하나만 할당
+	- 각 개체들은 변수에 접근할 수 있는 권한만 가짐	
+	
 - static 멤버변수 초기화 -> 클래스명::클래스변수 = 초기화;
 
-- 용어정리
-	- 상위클래스, 기초(base) 클래스  , 슈퍼(super)클래스, 부모 클래스
-	- 하위클래스, 유도(derived)클래스, 서브(sub)클래스  , 자식 클래스
+- 상속
+```c++
+class Person
+{
+private:
+	char name[50];
+	int age;
+public:
+{
+	// ...
+}
+
+class UnivStudent : public Person	// : public 상속받을 부모클래스명 
+{	// 자식클래스
+	// Person 클래스를 상속받는다.
+private:
+	string major;		// 문자열
+
+public:
+	UnivStudent(const char* myname, int myage, string mymajor) : Person(myname, myage)	// 부모클래스 생성자 : Person(myname, myage)
+	{		// 부모 클래스 생성자를 호출하여 부모클래스 멤버변수를 초기화
+		cout << "자식생성자 실행" << endl;
+		this->major = mymajor;
+		//strcpy(major, mymajor);
+	}
+	// ...
+};
+```
 	
-- protected 상속
+- protected 접근제한
+	- 상속한 자식 클래스에서의 접근을 허용
 	- protected보다 접근 범위가 넓은 멤버는(public) protected로 변경시켜서 상속
+	- private < protected < public
 
 ## 8일차
 - 부모 객체 포인터는 자식 객체 포인터를 가리킬 수 있다. (부모 -> 자식) ( 부모 <- 자식 X )
 
-- 다형성
-	- 오버로딩(Overloading) : 다중 정의
-	- 오버라이딩(Overriding) : 재정의, 상속관계에서 사용
+- 다형성(Polymorphism)
+	- 부모 타입의 객체 포인터는 부모클래스의 객체 뿐만 아니라, 부모클래스를 상속하는 자식 클래스도 가리킬 수 있다
+	- 객체 포인터 변수: 객체의 주소 값을 저장하는 포인터 변수(객체를 가리키는 포인터 변수)
+
+- 오버로딩(Overloading) : 다중 정의
+- 오버라이딩(Overriding) : 재정의, 상속관계에서 사용
 
 
 
