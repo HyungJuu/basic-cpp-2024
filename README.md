@@ -81,9 +81,9 @@ IoT 시스템개발자 심화 프로그래밍 언어 학습리포지토리
 	int &num3 = num2;	// 참조자를 대상으로 참조자 선언
 	int &num4 = num3;
 	```
-	
-	![참조자](https://raw.githubusercontent.com/HyungJuu/basic-cpp-2024/main/images/reference.PNG)
-	
+
+	![참조자](https://raw.githubusercontent.com/HyungJuu/basic-cpp-2024/main/images/reference.png)
+
 - Name Space
 - 전역, 지역변수
 - C에서 메모리
