@@ -17,6 +17,16 @@ public:
 		age = myage;
 	}
 
+	Person& operator=(const Person& ref)
+	{
+		delete[]name;	// "Yoon ji yul"이 저장된 공간을 반환한다.
+		int len = strlen(ref.name) + 1;
+		name = new char[len];
+		strcpy(name, ref.name);
+		age = ref.age;
+		return *this;
+	}
+
 	void ShowPersonInfo() const
 	{
 		cout << "이름 : " << name << endl;
@@ -27,6 +37,7 @@ public:
 		delete[]name;
 		cout << "called destructor!" << endl;
 	}
+
 };
 
 int main()
