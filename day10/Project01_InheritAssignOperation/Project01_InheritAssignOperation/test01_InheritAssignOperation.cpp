@@ -11,7 +11,7 @@ public:
 	{ }
 
 	void ShowData() { cout << num1 << ", " << num2 << endl; }
-	/*
+	
 	First& operator=(const First& ref)
 	{
 		cout << "First& operator=()" << endl;
@@ -19,7 +19,6 @@ public:
 		num2 = ref.num2;
 		return *this;
 	}
-	*/
 };
 
 class Second :public First
@@ -38,7 +37,6 @@ public:
 		cout << num3 << ", " << num4 << endl;
 	}
 
-	/*
 	Second& operator=(const Second& ref)
 	{
 		cout << "Second& operator=()" << endl;
@@ -47,8 +45,6 @@ public:
 		num4 = ref.num4;
 		return *this;
 	}
-	*/
-
 };
 
 int main()
