@@ -28,12 +28,12 @@ public:
 		delete[]name;
 	}
 
-	int Sum() const
+	int Sum() const		// 학생별 총점
 	{
 		return (kr + math + english);
 	}
 
-	int Average() const
+	int Average() const		// 학생별 평균
 	{
 		return Sum() / 3;
 	}
@@ -44,6 +44,7 @@ public:
 		cout << "이름 : " << name << endl;
 		cout << "총점 : " << Sum() << endl;
 		cout << "평균 : " << Average() << endl << endl;
+		cout << "===========================" << endl;
 	}
 };
 
@@ -57,12 +58,11 @@ int main()
 	cout << "학생 수 입력 >> ";
 	cin >> num;
 
-	//Grade* students = new Grade[num];
-
-	for (int i = 1; i < num; i++)
+	for (int i = 0; i < num; i++)
 	{
 		cout << "이름 입력 >> ";
 		cin >> name1;
+
 		cout << "국어점수 입력 >> ";
 		cin >> kor1;
 
@@ -79,11 +79,8 @@ int main()
 		sumKor += kor1;
 		sumMath += math1;
 		sumEng += eng1;
-
-		
-
-
 	}
+
 	cout << "국어과목 총점 : " << sumKor << "\t평균 : " << sumKor / num << endl;
 	cout << "수학과목 총점 : " << sumMath << "\t평균 : " << sumMath / num << endl;
 	cout << "영어과목 총점 : " << sumEng << "\t평균 : " << sumEng / num << endl;
