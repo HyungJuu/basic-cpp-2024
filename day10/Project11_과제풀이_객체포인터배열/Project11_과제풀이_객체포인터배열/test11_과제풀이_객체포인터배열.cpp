@@ -59,7 +59,7 @@ int main()
 	cin >> student;
 	cout << endl;
 
-	vector<Grade> gradeAry(num);		// 동적으로 배열을 할당받는다. -> 성적을 처리할 학생수를 입력하면 그만큼의 방만 만들어진다.
+	vector<Grade> gradeAry(student);		// 동적으로 배열을 할당받는다. -> 성적을 처리할 학생수를 입력하면 그만큼의 방만 만들어진다.
 
 
 	// 1. 입력을 받는다.
@@ -86,7 +86,7 @@ int main()
 	for (int i = 0; i < student; i++)
 	{
 		//cout <<"총점 : "<< gradeAry[0]->sum() << "\t평점 : " << gradeAry[0]->avr() << endl;
-		printf("%s 학생 총점 : %d, 평점 : %.1lf\n",gradeAry[i]->getName(), gradeAry[i]->sum(), gradeAry[i]->avr());
+		printf("%s 학생 총점 : %d, 평점 : %.1lf\n",gradeAry[i].getName(), gradeAry[i].sum(), gradeAry[i].avr());
 	}
 
 	int sumKo = 0;
@@ -95,9 +95,9 @@ int main()
 
 	for (int i = 0; i < student; i++)
 	{
-		sumKo += gradeAry[i]->getKo();
-		sumEng += gradeAry[i]->getEng();
-		sumMath += gradeAry[i]->GetMath();
+		sumKo += gradeAry[i].getKo();
+		sumEng += gradeAry[i].getEng();
+		sumMath += gradeAry[i].GetMath();
 	}
 	printf("\n*******과목당 총점 및 평균*******\n");
 	printf("국어 총점 : %d, 평균 : %.1lf\n", sumKo, sumKo/ float(size(gradeAry)));
