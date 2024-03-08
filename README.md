@@ -363,8 +363,75 @@ int main()
 	- 함수 또는 객체의 동작방식에 유연함을 제공할 때 사용
 
 ## 11일차
-// p.489 ~
+// p.489 ~ 537
 
 - 임시 객체로의 자동 형변환과 형변환 연산자
 
 - string 클래스
+
+- 함수 템플릿
+	- 함수를 만드는 도구
+	- 다양한 자료형의 함수를 만들 수 있음
+	- template <typename T> 또는 template <class T> 선언(같은 의미)
+	
+	```C++
+	/*
+	int Add(int num1, int num2)
+	{
+		return num1 + num2;
+	}
+	*/
+	
+	// 위의 함수를 템플릿으로 만들면 아래와 같다
+	template <typename T>	// T라는 이름으로 아래의 함수를 템플릿으로 정의한다는 의미
+	T Add(T num1, T num2)	// T -> 자료형을 결정짓지 않는다는 것
+	{
+		return num1 + num2;
+	}
+	
+	```
+	
+## 12일차
+// p.536 ~ 
+
+- 함수 템플릿 이어서
+	- 재활용의 측면에서 매우 좋음 -> 메인함수에서 사용하고싶은 자료형을 입력하기만 하면 됨
+	- strcmp() : 매개변수로 들어온 두개의 문자열을 비교하여 값을 반환
+		- str1 > str2 : 양수(1) 반환
+		- str1 < str2 :  음수(-1) 반환
+		- str1 == str2 : 0 반환
+
+	- 함수 템플릿 특수화
+		- 필요에 따라 예외적으로 함수를 특정 자료형에 대해서 명시적으로 정의
+		
+		```C++
+		template <>
+		char* Max(char* a, char* b)		// 함수템플릿 특수화 : char*(자료형)에 대해서 명시적으로 정의
+		{
+			cout << "char* Max<char*>(char* a, char* b)" << endl;
+			return strlen(a) > strlen(b) ? a : b;
+		}
+		```
+		
+- 클래스 템플릿
+	- 선언과 정의 분리
+
+	```C++
+	// 파일분할
+	
+	// 헤더파일 (.h )
+	template <typename T>
+	class SimpleTemplate
+	{
+	public:
+		T SimpleFunc(const T& ref);
+	};
+
+	// 소스파일 (.cpp 
+	template <typename T>
+	T SimpleTemplate<T>::SimpleFunc(const T& ref)
+	{
+		// ...
+	}
+	```
+- Point 클래스 템플릿과 배열 클래스 템플릿
