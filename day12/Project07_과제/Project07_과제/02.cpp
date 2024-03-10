@@ -1,11 +1,11 @@
-﻿﻿#include <iostream>
+﻿#include <iostream>
 #include <string>
 using namespace std;
 
 // 부모클래스
 class Product
 {
-private:
+protected:
 	string id;
 	int price;
 	string producer;
@@ -36,14 +36,13 @@ public:
 		: Product(aid, aprice, aproducer), ISBN(aISBN), author(aauthor), title(atitle)
 	{ }
 
-	virtual void ShowInfo()
+	void ShowInfo() const
 	{
 		Product::ShowInfo();
 		cout << "고유번호 : " << ISBN << ", 저자 : " << author << ", 제목 : " << title << endl;
 	}
 };
 
-/*
 class Handphone : public Product
 {
 private:
@@ -55,12 +54,12 @@ public:
 		: Product(aid, aprice, aproducer), model(amodel), RAM(aRAM)
 	{ }
 
-	virtual void HandphoneInfo() const
+	void ShowInfo() const
 	{
+		Product::ShowInfo();
 		cout << "모델명 : " << model << ", 램 크기 : " << RAM << "GB" << endl;
 	}
 };
-
 
 class Computer : public Product
 {
@@ -74,19 +73,18 @@ public:
 		: Product(aid, aprice, aproducer), model(amodel), cpu(acpu), RAM(aRAM)
 	{ }
 
-	virtual void ComputerInfo() const
+	void ShowInfo() const
 	{
+		Product::ShowInfo();
 		cout << "모델명 : " << model << ", CPU 크기 : " << cpu << ", 램 크기 : " << RAM << "GB" << endl;
 	}
 };
-*/
-
 
 int main()
 {
 	Product* products[100];
 	int num;
-	int product = 0;
+	char product = {};
 
 	while (1)
 	{
@@ -132,7 +130,6 @@ int main()
 				products[product++] = new Book(id, price, producer, ISBN, author, title);
 			}
 
-			/*
 			else if (pnum1 == 2) {
 				string model;
 				int RAM;
@@ -143,6 +140,7 @@ int main()
 
 				products[product++] = new Handphone(id, price, producer, model, RAM);
 			}
+
 			else if (pnum1 == 3) {
 				string model;
 				int cpu, RAM;
@@ -155,7 +153,6 @@ int main()
 
 				products[product++] = new Computer(id, price, producer, model, cpu, RAM);
 			}
-			*/
 
 			else {
 				cout << "잘못된 입력입니다." << endl;
@@ -169,17 +166,24 @@ int main()
 			for (int i = 0; i < product; ++i)
 			{
 				products[i]->ShowInfo();
-				Product* product = new Book();
-				product->ShowInfo();
-
 				cout << endl;
 			}
 		}
 
 		else if (num == 3)
 		{
+			string id;
 			cout << "상품검색 >> " << endl;
+			for (int i = 0; i < product; ++i)
+			{
 
+				cout << "검색할 상품의 ID를 입력하세요 >> ";
+				cin >> id;
+
+				// 이어서
+				products[i]->ShowInfo();
+				cout << endl;
+			}
 		}
 
 		else if (num == 0)
@@ -195,5 +199,8 @@ int main()
 		}
 
 	}
+
+	//delete[]products;
+
 	return 0;
 }
