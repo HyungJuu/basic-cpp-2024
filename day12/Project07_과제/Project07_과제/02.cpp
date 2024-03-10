@@ -17,7 +17,12 @@ public:
 
 	virtual void ShowInfo() const
 	{
-		cout << "ID : " << id << ", 가격 : " << price << ", 제조사 : " << producer << endl << endl;
+		cout << "ID : " << id << ", 가격 : " << price << ", 제조사 : " << producer << endl;
+	}
+
+	string getId() const
+	{
+		return id;
 	}
 
 	virtual ~Product() {}
@@ -40,6 +45,7 @@ public:
 	{
 		Product::ShowInfo();
 		cout << "고유번호 : " << ISBN << ", 저자 : " << author << ", 제목 : " << title << endl;
+		cout << "************************************************" << endl;
 	}
 };
 
@@ -58,6 +64,7 @@ public:
 	{
 		Product::ShowInfo();
 		cout << "모델명 : " << model << ", 램 크기 : " << RAM << "GB" << endl;
+		cout << "************************************************" << endl;
 	}
 };
 
@@ -77,6 +84,7 @@ public:
 	{
 		Product::ShowInfo();
 		cout << "모델명 : " << model << ", CPU 크기 : " << cpu << ", 램 크기 : " << RAM << "GB" << endl;
+		cout << "************************************************" << endl;
 	}
 };
 
@@ -103,7 +111,7 @@ int main()
 
 			cout << "[상품 종류 선택] " << endl;;
 			cout << " >> 1. 책 / 2. 핸드폰 / 3.컴퓨터" << endl;;
-			cout << "번호입력 >> ";
+			cout << "번호 입력 >> ";
 			cin >> pnum1;
 			cout << endl;
 
@@ -154,7 +162,8 @@ int main()
 				products[product++] = new Computer(id, price, producer, model, cpu, RAM);
 			}
 
-			else {
+			else 
+			{
 				cout << "잘못된 입력입니다." << endl;
 				continue;
 			}
@@ -162,7 +171,7 @@ int main()
 
 		else if (num == 2)
 		{
-			cout << "상품출력 >> " << endl;
+			cout << "<< 상품 출력 >> " << endl;
 			for (int i = 0; i < product; ++i)
 			{
 				products[i]->ShowInfo();
@@ -173,16 +182,24 @@ int main()
 		else if (num == 3)
 		{
 			string id;
-			cout << "상품검색 >> " << endl;
+			cout << "<< 상품 검색 >> " << endl;
+			cout << "검색할 상품의 ID를 입력하세요 >> ";
+			cin >> id;
+			cout << endl;
+
+			bool found = false;
 			for (int i = 0; i < product; ++i)
 			{
-
-				cout << "검색할 상품의 ID를 입력하세요 >> ";
-				cin >> id;
-
-				// 이어서
-				products[i]->ShowInfo();
-				cout << endl;
+				if (products[i]->getId() == id)
+				{
+					cout << "<< 검색 결과 >> " << endl;
+					products[i]->ShowInfo();
+					found = true;
+				}
+			}
+			if(!found)
+			{
+				cout << "검색 결과가 없습니다." << endl << endl;
 			}
 		}
 
@@ -199,8 +216,6 @@ int main()
 		}
 
 	}
-
-	//delete[]products;
 
 	return 0;
 }
