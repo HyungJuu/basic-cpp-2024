@@ -21,7 +21,7 @@
     <ClCompile Include="01.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="02.cpp">
+    <ClCompile Include="02_최종본.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

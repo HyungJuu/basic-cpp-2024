@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test01_Calculator.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="test01_Calculator02.cpp">
+    <ClCompile Include="test02_Vector.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
