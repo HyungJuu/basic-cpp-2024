@@ -440,3 +440,35 @@ int main()
 ## 13일차
 - 예외처리
 	- try, catch
+
+- 배열 : 검색 <-> 수정
+
+- vector
+	- 자동으로 메모리가 할당
+	
+	```C++
+	int main()
+	{
+		vector<string> vs;
+
+		vs.push_back("Hi");
+		vs.push_back("Hello");
+		vs.push_back("Hongkildon");
+		cout << "vs.front() : " << vs.front() << endl;
+		cout << "vs.back() : " << vs.back() << endl;
+
+		vector<string>::iterator it;
+		for (it = vs.begin(); it != vs.end(); it++)
+		{
+			cout << *it << endl;
+		}
+
+		vector<int> v1;			// 크기가 0인 벡터가 생성
+		vector<int> v2(5);		// 크기가 5인 벡터가 생성(0으로 초기화)
+		vector<int> v3 = { 10, 20, 30 };
+		vector<int> v4(10, 7);	// 크기가 10이고, 7로 초기화
+
+		return 0;
+	}
+	
+	```
